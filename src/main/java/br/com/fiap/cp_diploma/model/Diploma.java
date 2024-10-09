@@ -1,4 +1,4 @@
-package model;
+package br.com.fiap.cp_diploma.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

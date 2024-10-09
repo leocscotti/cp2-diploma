@@ -1,13 +1,11 @@
-package model;
+package br.com.fiap.cp_diploma.model;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 public class User implements UserDetails {

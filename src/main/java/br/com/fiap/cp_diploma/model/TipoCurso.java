@@ -1,4 +1,4 @@
-package model;
+package br.com.fiap.cp_diploma.model;
 
 public enum TipoCurso {
     GRADUACAO("TipoCurso Graduacao"),
