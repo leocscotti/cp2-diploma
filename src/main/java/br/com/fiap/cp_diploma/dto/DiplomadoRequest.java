@@ -7,8 +7,8 @@ public class DiplomadoRequest {
     private String nome;
     @NotBlank(message= "A nacionalidade do diplomado é obrigatória")
     private String nacionalidade;
-    @NotBlank(message= "A nacionalidade deve ser obrigatória e no formato cidade-uf, ex: Campinas-SP")
-    private String naturiladade;
+    @NotBlank(message= "A naturalidade deve ser obrigatória e no formato cidade-uf, ex: Campinas-SP")
+    private String naturalidade;
     @Pattern(regexp = "(^\\d{1,2}).?(\\d{3}).?(\\d{3})-?(\\d{1}|X|x$)", message = "o RG deve ser passado no formato padrão")
     private String rg;
 
@@ -28,12 +28,12 @@ public class DiplomadoRequest {
         this.nacionalidade = nacionalidade;
     }
 
-    public String getNaturiladade() {
-        return naturiladade;
+    public String getNaturalidade() {
+        return naturalidade;
     }
 
-    public void setNaturiladade(String naturiladade) {
-        this.naturiladade = naturiladade;
+    public void setNaturalidade(String naturalidade) {
+        this.naturalidade = naturalidade;
     }
 
     public String getRg() {
