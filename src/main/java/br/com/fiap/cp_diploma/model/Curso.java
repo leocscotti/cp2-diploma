@@ -18,7 +18,7 @@ public class Curso {
     @Enumerated(EnumType.STRING)
     private TipoCurso tipo;
 
-    @ManyToOne
+    @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Diploma> diplomas;
 
     public Long getId() {
@@ -43,5 +43,13 @@ public class Curso {
 
     public void setTipo(TipoCurso tipo) {
         this.tipo = tipo;
+    }
+
+    public List<Diploma> getDiplomas() {
+        return diplomas;
+    }
+
+    public void setDiplomas(List<Diploma> diplomas) {
+        this.diplomas = diplomas;
     }
 }

@@ -3,27 +3,22 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.UUID;
 
 @Entity
 @Table(name="tb_diploma")
 public class Diploma {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private UUID id;
 
     @ManyToOne
-    @JoinTable(name = "tb_diplomado_diploma",
-            joinColumns = @JoinColumn(name = "id_diploma", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "id_diplomado", referencedColumnName = "id")
-    )
-    private Collection<Diplomado> diplomados;
+    @JoinColumn(name = "diplomado_id", referencedColumnName = "id")
+    private Diplomado diplomado;
 
     @ManyToOne
-    @JoinTable(name = "tb_curso_diploma",
-            joinColumns = @JoinColumn(name = "id_diploma", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "id_curso", referencedColumnName = "id")
-    )
-    private Collection<Curso> cursos;
+    @JoinColumn(name = "curso_id", referencedColumnName = "id")
+    private Curso curso;
 
     @Column(name= "data_conclusao")
     private LocalDate dataConclusao;
@@ -35,28 +30,28 @@ public class Diploma {
    @Column(name= "nome_reitor")
     private String nomeReitor;
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
-    public Collection<Diplomado> getDiplomados() {
-        return diplomados;
+    public Diplomado getDiplomado() {
+        return diplomado;
     }
 
-    public void setDiplomados(Collection<Diplomado> diplomados) {
-        this.diplomados = diplomados;
+    public void setDiplomado(Diplomado diplomado) {
+        this.diplomado = diplomado;
     }
 
-    public Collection<Curso> getCursos() {
-        return cursos;
+    public Curso getCurso() {
+        return curso;
     }
 
-    public void setCursos(Collection<Curso> cursos) {
-        this.cursos = cursos;
+    public void setCurso(Curso curso) {
+        this.curso = curso;
     }
 
     public LocalDate getDataConclusao() {

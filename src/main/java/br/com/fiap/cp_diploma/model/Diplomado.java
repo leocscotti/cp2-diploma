@@ -23,7 +23,7 @@ public class Diplomado {
     @Column(name = "rg")
     private String rg;
 
-    @ManyToOne
+    @OneToMany(mappedBy = "diplomado", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Diploma> diplomas;
 
     public Long getId() {
@@ -64,5 +64,13 @@ public class Diplomado {
 
     public void setRg(String rg) {
         this.rg = rg;
+    }
+
+    public List<Diploma> getDiplomas() {
+        return diplomas;
+    }
+
+    public void setDiplomas(List<Diploma> diplomas) {
+        this.diplomas = diplomas;
     }
 }
