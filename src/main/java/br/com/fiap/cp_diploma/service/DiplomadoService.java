@@ -13,7 +13,6 @@ public class DiplomadoService {
     @Autowired
     private DiplomadoRepository diplomadoRepository;
 
-    // Métodos Mapper
     public Diplomado requestToDiplomado(DiplomadoRequest diplomadoRequest) {
         Diplomado diplomado = new Diplomado();
         diplomado.setNome(diplomadoRequest.getNome());

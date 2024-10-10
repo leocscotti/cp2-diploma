@@ -13,7 +13,6 @@ public class CursoService {
     @Autowired
     private CursoRepository cursoRepository;
 
-    // Métodos Mapper
     public Curso requestToCurso(CursoRequest cursoRequest) {
         Curso curso = new Curso();
         curso.setNome(cursoRequest.getNome());
