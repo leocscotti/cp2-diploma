@@ -18,7 +18,7 @@ public class Curso {
     @Enumerated(EnumType.STRING)
     private TipoCurso tipo;
 
-    @ManyToMany(mappedBy = "diplomas")
+    @ManyToOne
     private List<Diploma> diplomas;
 
     public Long getId() {

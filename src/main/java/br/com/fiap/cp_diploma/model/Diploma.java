@@ -1,7 +1,7 @@
 package br.com.fiap.cp_diploma.model;
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Collection;
 
 @Entity
@@ -26,9 +26,9 @@ public class Diploma {
     private Collection<Curso> cursos;
 
     @Column(name= "data_conclusao")
-    private LocalDateTime dataConclusao;
+    private LocalDate dataConclusao;
 
-   @Column(name= "sexo")
+   @Column(name= "sexo_reitor")
    @Enumerated(EnumType.STRING)
     private Sexo sexo;
 
@@ -59,11 +59,11 @@ public class Diploma {
         this.cursos = cursos;
     }
 
-    public LocalDateTime getDataConclusao() {
+    public LocalDate getDataConclusao() {
         return dataConclusao;
     }
 
-    public void setDataConclusao(LocalDateTime dataConclusao) {
+    public void setDataConclusao(LocalDate dataConclusao) {
         this.dataConclusao = dataConclusao;
     }
 

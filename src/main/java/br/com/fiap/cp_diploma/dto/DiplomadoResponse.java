@@ -1,30 +1,11 @@
-package br.com.fiap.cp_diploma.model;
+package br.com.fiap.cp_diploma.dto;
 
-import jakarta.persistence.*;
-
-import java.util.List;
-
-@Entity
-@Table(name= "tb_diplomado")
-public class Diplomado {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class DiplomadoResponse {
     private Long id;
-
-    @Column(name = "nome")
     private String nome;
-
-    @Column(name = "nacionalidade")
     private String nacionalidade;
-
-    @Column(name = "naturalidade")
     private String naturalidade;
-
-    @Column(name = "rg")
     private String rg;
-
-    @ManyToOne
-    private List<Diploma> diplomas;
 
     public Long getId() {
         return id;
