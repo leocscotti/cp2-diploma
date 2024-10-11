@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity
-public class User implements UserDetails {
+public class Usuario implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
@@ -17,10 +17,10 @@ public class User implements UserDetails {
     private String senha;
     private UserRole role;
 
-    public User() {
+    public Usuario() {
     }
 
-    public User(String id, String login, String senha, UserRole role) {
+    public Usuario(String id, String login, String senha, UserRole role) {
         this.id = id;
         this.login = login;
         this.senha = senha;

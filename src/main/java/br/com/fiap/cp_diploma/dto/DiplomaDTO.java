@@ -1,5 +1,6 @@
 package br.com.fiap.cp_diploma.dto;
 
+import br.com.fiap.cp_diploma.model.Sexo;
 import br.com.fiap.cp_diploma.model.TipoCurso;
 
 import java.time.LocalDate;
@@ -14,11 +15,15 @@ public class DiplomaDTO {
     private LocalDate dataConclusao;
     private String tituloReitor;
     private String cargoReitor;
+    private Long idDiplomado; // ID do diplomado
+    private Long idCurso;     // ID do curso
+    private Sexo sexo;        // Sexo do reitor
+    private String nomeReitor;
 
     public DiplomaDTO() {
     }
 
-    public DiplomaDTO(String nomeDiplomado, String nacionalidade, String naturalidade, String numeroRg, String nomeCurso, TipoCurso tipoCurso, LocalDate dataConclusao, String tituloReitor, String cargoReitor) {
+    public DiplomaDTO(String nomeDiplomado, String nacionalidade, String naturalidade, String numeroRg, String nomeCurso, TipoCurso tipoCurso, LocalDate dataConclusao, String tituloReitor, String cargoReitor, Long idDiplomado, Long idCurso, Sexo sexo, String nomeReitor) {
         this.nomeDiplomado = nomeDiplomado;
         this.nacionalidade = nacionalidade;
         this.naturalidade = naturalidade;
@@ -28,6 +33,10 @@ public class DiplomaDTO {
         this.dataConclusao = dataConclusao;
         this.tituloReitor = tituloReitor;
         this.cargoReitor = cargoReitor;
+        this.idDiplomado = idDiplomado;
+        this.idCurso = idCurso;
+        this.sexo = sexo;
+        this.nomeReitor = nomeReitor;
     }
 
     public String getNomeDiplomado() {
@@ -100,5 +109,37 @@ public class DiplomaDTO {
 
     public void setCargoReitor(String cargoReitor) {
         this.cargoReitor = cargoReitor;
+    }
+
+    public Long getIdDiplomado() {
+        return idDiplomado;
+    }
+
+    public void setIdDiplomado(Long idDiplomado) {
+        this.idDiplomado = idDiplomado;
+    }
+
+    public Long getIdCurso() {
+        return idCurso;
+    }
+
+    public void setIdCurso(Long idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    public Sexo getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getNomeReitor() {
+        return nomeReitor;
+    }
+
+    public void setNomeReitor(String nomeReitor) {
+        this.nomeReitor = nomeReitor;
     }
 }

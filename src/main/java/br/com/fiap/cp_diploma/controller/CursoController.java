@@ -66,7 +66,7 @@ public class CursoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletarEmpresaPorId(@PathVariable Long id){
+    public ResponseEntity<Void> deletarCursoPorId(@PathVariable Long id){
         Optional<Curso> curso= cursoRepository.findById(id);
         if(curso.isPresent()){
             cursoRepository.deleteById(id);
