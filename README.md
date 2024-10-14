@@ -35,7 +35,7 @@ Projeto de api de diplomas para o checkpoint 2.
 
 - ## API Reference e endpoints
 
-#### Registrar usuario
+- #### Registrar usuario
 
 ```http
   POST /auth/register
@@ -58,7 +58,7 @@ Body:
 | `role`   | `UserRole` | Role (atribuição) do usuario a ser registrado |
 
 
-#### Logar usuario
+- #### Logar usuario
 
 ```http
   POST /auth/login
@@ -86,7 +86,7 @@ Body:
   GET /diplomados
 ```
 
-#### Buscar diplomado por id 
+- #### Buscar diplomado por id 
 
 ```http
   GET /diplomados/${id}
@@ -96,7 +96,7 @@ Body:
 |:----------|:-------|:---------------------------------------------|
 | `id`      | `Long` | **Obrigatório**. Id do diplomado a ser buscado |
 
-#### Criar diplomado
+- #### Criar diplomado
 
 ```http
   POST /diplomados
@@ -120,7 +120,7 @@ Body:
 | `naturalidade`   | `String` | Naturalidade do diplomado a ser criado  |
 | `rg` | `String` | RG do diplomado a ser criado |
 
-#### Atualizar diplomado por id 
+- #### Atualizar diplomado por id 
 
 ```http
   PUT /diplomados/${id}
@@ -148,7 +148,7 @@ Body:
 | `naturalidade`   | `String` | Naturalidade do diplomado a ser criado  |
 | `rg` | `String` | RG do diplomado a ser criado |
 
-#### Excluir diplomado por id 
+- #### Excluir diplomado por id 
 
 ```http
   DELETE /diplomados/${id}
@@ -165,7 +165,7 @@ Body:
   GET /cursos
 ```
 
-#### Buscar curso por id 
+- #### Buscar curso por id 
 
 ```http
   GET /cursos/${id}
@@ -175,7 +175,7 @@ Body:
 |:----------|:-------|:---------------------------------------------|
 | `id`      | `Long` | **Obrigatório**. Id do curso a ser buscado |
 
-#### Criar curso
+- #### Criar curso
 
 ```http
   POST /cursos
@@ -195,7 +195,7 @@ Body:
 | `nome`    | `String` | Nome do curso a ser criado   |
 | `tipo`   | `TipoCurso` | Tipo do curso a ser criado |
 
-#### Atualizar curso por id 
+- #### Atualizar curso por id 
 
 ```http
   PUT /cursos/${id}
@@ -219,7 +219,7 @@ Body:
 | `nome`    | `String` | Nome do curso a ser criado   |
 | `tipo`   | `TipoCurso` | Tipo do curso a ser criado |
 
-#### Excluir curso por id 
+- #### Excluir curso por id 
 
 ```http
   DELETE /cursos/${id}
@@ -230,7 +230,7 @@ Body:
 | `id`      | `Long` | **Obrigatório**. Id do curso a ser excluído |
 
 
-- #### Buscar todos os diplomas 
+- #### Buscar diploma por id
 
 ```http
   GET /diplomas{id}
@@ -240,7 +240,7 @@ Body:
 |:----------|:-------|:---------------------------------------------|
 | `id`      | `UUID` | **Obrigatório**. Id do diploma a ser buscado |
 
-#### Buscar diploma por id e texto gerado
+- #### Buscar diploma por id e texto gerado
 
 ```http
   GET /diploma/${id}/texto
@@ -250,7 +250,7 @@ Body:
 |:----------|:-------|:---------------------------------------------|
 | `id`      | `UUID` | **Obrigatório**. Id do diploma a ser buscado |
 
-#### Criar diploma
+- #### Criar diploma
 
 ```http
   POST /diplomas
