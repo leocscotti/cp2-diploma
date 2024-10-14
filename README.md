@@ -55,7 +55,7 @@ Body:
 |:----------|:---------|:--------------------------------|
 | `login`    | `String` | Login do usuario a ser registrado   |
 | `senha`   | `String` | Senha do usario a ser registrado |
-| `role`   | `UserRole` | Role (atribuição) do usuario a ser criado  |
+| `role`   | `UserRole` | Role (atribuição) do usuario a ser registrado |
 
 
 #### Logar usuario
@@ -260,12 +260,22 @@ Body:
 
 ```json
 {
-     "nome": "Ciencia da computacao",
-    "tipo": "GRADUACAO"
+     "dataConclusao": "2024-12-15",
+    "tituloReitor": "Prof. Dr.",
+    "cargoReitor": "Reitor",
+    "nomeReitor": "Carlos Eduardo",
+    "sexo": "M",
+    "idDiplomado": 1, 
+    "idCurso": 2   
 }
 ```
 
 | Parâmetro | Tipo     | Descrição                       |
 |:----------|:---------|:--------------------------------|
-| `nome`    | `String` | Nome do curso a ser criado   |
-| `tipo`   | `TipoCurso` | Tipo do curso a ser criado |
+| `dataConclusao`    | `LocalDate` | Data de conclusão do curso do diploma a ser criado   |
+| `tituloReitor`   | `String` | Titulo do reitor do diploma a ser criado |
+| `cargoReitor`   | `String` | Cargo do reitor do diploma a ser criado |
+| `nomeReitor`   | `String` | Nome do reitor do diploma a ser criado |
+| `sexo`   | `Sexo` | Sexo do reitor do diploma a ser criado |
+| `idDiplomado`   | `Long` | ID do diplomado do diploma a ser criado |
+| `idCurso`   | `Long` | ID do curso do diploma a ser criado |
