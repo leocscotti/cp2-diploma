@@ -1,4 +1,5 @@
 package br.com.fiap.cp_diploma.dto;
 
-public record RegisterDTO() {
-}
+import br.com.fiap.cp_diploma.model.UserRole;
+
+public record RegisterDTO(String login, String senha, UserRole role) {}

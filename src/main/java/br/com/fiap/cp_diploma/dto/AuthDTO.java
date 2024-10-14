@@ -1,4 +1,3 @@
 package br.com.fiap.cp_diploma.dto;
 
-public record AuthDTO() {
-}
+public record AuthDTO(String login, String senha) {}

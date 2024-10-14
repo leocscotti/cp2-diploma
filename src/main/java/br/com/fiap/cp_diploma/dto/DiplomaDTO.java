@@ -15,9 +15,9 @@ public class DiplomaDTO {
     private LocalDate dataConclusao;
     private String tituloReitor;
     private String cargoReitor;
-    private Long idDiplomado; // ID do diplomado
-    private Long idCurso;     // ID do curso
-    private Sexo sexo;        // Sexo do reitor
+    private Long idDiplomado;
+    private Long idCurso;
+    private Sexo sexo;
     private String nomeReitor;
 
     public DiplomaDTO() {

@@ -20,11 +20,10 @@ public class Usuario implements UserDetails {
     public Usuario() {
     }
 
-    public Usuario(String id, String login, String senha, UserRole role) {
-        this.id = id;
-        this.login = login;
-        this.senha = senha;
-        this.role = role;
+    public Usuario(String login, String senha, UserRole role) {
+        this.login= login;
+        this.senha= senha;
+        this.role= role;
     }
 
     @Override

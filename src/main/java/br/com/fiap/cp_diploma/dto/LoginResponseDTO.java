@@ -1,4 +1,4 @@
 package br.com.fiap.cp_diploma.dto;
 
-public record LoginResponseDTO() {
+public record LoginResponseDTO(String token) {
 }
