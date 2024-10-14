@@ -10,6 +10,8 @@ Projeto de api de diplomas para o checkpoint 2.
 
 ### Vinicius de Araujo Camargo- RM99494
 
+### Igor Ribeiro Bezerra- RM550989
+
 ## Tecnologias
 
 - [Java 21](https://docs.oracle.com/en/java/javase/21/)
